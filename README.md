@@ -1,2 +1,0 @@
-# FULLStack_3B
-
