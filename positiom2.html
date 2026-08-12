@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: rgb(168, 99, 253);
+    }
+    .class{
+        margin: auto;
+        width: 100vh;
+        height: 100vw;
+        background-color: lightblue;
+       
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #box1 img{
+        text-decoration: none;
+        color: white;
+        height: 100%;
+        width: 100%;
+    }
+    #box1{
+        background-color: rgb(255, 196, 4);
+        position: sticky;/*normal flow me rehta hai and apni designated/alloted layout k based  positioned hota hai and space bhi reserve rehete hai  */
+        top: 10px;
+        left: 0px;
+        width: 79vw;
+        height: 700px;
+        box-shadow:  0px 0px 10px 5px rgb(255, 196, 4);
+    }
+    #box2{
+        background-color: rgb(255, 4, 4);
+        position: sticky;/* normal flow se bahar aa jata hai  and parent ke relative position se and space  reserve nhi rehete hai  */
+        top: 10px;
+        left: 0px;
+        width: 100vw;
+        height: 700px;
+        box-shadow:  0px 0px 10px 5px rgb(255, 4, 4);
+    }
+    #box2 img{
+        text-decoration: none;
+        color: white;
+        height: 100%;
+        width: 100%;
+    }
+    #box3{
+        background-color: rgb(4, 255, 4);
+        position: sticky;
+        top: 10px;
+        left: 0px;
+        width: 100vw;
+        height: 700px;
+        box-shadow:  0px 0px 10px 5px rgb(4, 255, 4);
+    }
+    #box3 img{
+        text-decoration: none;
+        color: white;
+        height: 100%;
+        width: 100%;
+    }
+    #box4 img{
+        text-decoration: none;
+        color: white;
+        height: 100%;
+        width: 100%;
+    }
+    #box4{
+        background-color: rgb(4, 4, 255);
+        position: sticky;
+        top: 10px;
+        left: 0px;
+        width: 100vw;
+        height: 700px;
+        box-shadow:  0px 0px 10px 5px rgb(4, 4, 255);
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="class" id="box1"><img src="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp" alt="Box 1" target="_blank"></div>
+        <div class="class" id="box2"><img src="https://images.unsplash.com/photo-1486365227551-f3f90034a57c?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmlyZHN8ZW58MHx8MHx8fDA%3D" alt="Box 2" target="_blank"></div>
+        <div class="class" id="box3"><img src="https://images.unsplash.com/photo-1606567595334-d39972c85dbe?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmlyZHN8ZW58MHx8MHx8fDA%3D" alt="Box 3" target="_blank"></div>
+        <div class="class" id="box4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrRjNwCeCh58pIxBIO_LLi4EZm9d4NBGLagOzLZp4XEhSyHe_tkwOg7IKK&s=10" alt="Box 4" target="_blank"></div>
+    </div>
+</body>
+</html>

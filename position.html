@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* margin: 0;
+            padding: 0; */
+            height: 100vh;
+            width: 100vw;
+        }
+        .container{
+            margin: 0;
+            /* display: flex;
+            justify-content: space-between;
+            align-items: center; */
+            height: 100vh;/* ? */
+            width: 100vw;
+            background-color: rgb(254, 137, 137);
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(147, 254, 137);
+        }
+        #box1{
+            background-color: rgb(255, 196, 4);
+            position: relative;/*normal flow me rehta hai and apni designated/alloted layout k based  positioned hota hai and space bhi reserve rehete hai  */
+            top: 0px;
+            left: 0px;
+        }
+        #box2{
+            background-color: rgb(255, 4, 4);
+            position: absolute;/* normal flow se bahar aa jata hai  and parent ke relative position se and space  reserve nhi rehete hai  */
+            top: 10px;
+            left: 10px;
+        }
+        #box3{
+            background-color: rgb(4, 255, 4);
+            position: relative;
+            top: 0;
+            left: 0px;
+            /* display: none;  space and element gayab */
+            visibility: hidden;/* space reserve rehta hai but element visible nhi hota hai  */
+        }
+        #box4{
+            background-color: rgb(4, 4, 255);
+            position: fixed;
+            top: 100px;/* starting m relative and become sticky when top property triggered */
+            left: 330px;
+        }
+        #box5{
+            background-color: rgb(255, 4, 255);
+            position: sticky;
+            top: 100px;
+            left: 0px;
+        }
+        p{
+            margin: 0;
+            background-color: rgb(205, 255, 22);
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+       
+    </div>
+     <!-- /* content added  for scroll */ -->
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga adipisci consequatur corrupti aperiam, quam animi, reiciendis quo temporibus molestias vitae, atque fugiat sint in id praesentium aliquid odit expedita sit.
+     Voluptatem, aliquam nesciunt impedit magnam dignissimos ratione! Esse, dolor. Dicta perspiciatis eum suscipit, expedita commodi sapiente voluptatem, illo illum excepturi ipsa exercitationem repellat vel velit? Animi corporis enim labore tenetur?
+     Vitae enim dolor fugiat repudiandae consequuntur id aut assumenda eos est dolores pariatur, dicta aliquid accusantium numquam doloribus deserunt amet inventore officia suscipit. Doloribus nulla ipsam tenetur at totam ab!
+     Aut excepturi dolore vitae tempore blanditiis mollitia maxime, minima sapiente deleniti incidunt voluptatibus quae nihil at quibusdam nemo possimus rerum illum dicta quod perspiciatis quas sunt? Quod odit nostrum esse.
+     Necessitatibus totam quasi odit accusantium, enim earum, omnis quam est optio magni iure assumenda quibusdam at, dolore deleniti deserunt perspiciatis aliquid dignissimos harum blanditiis incidunt magnam ad. Consequuntur, necessitatibus suscipit.
+     Ducimus aliquid odio adipisci iusto dolorem nobis. Exercitationem excepturi saepe asperiores ut quo sed, labore sint provident, dolorum officia ipsum fugit animi, delectus autem id voluptatum? Voluptas magnam ab delectus?
+     Vero, eligendi. Dolores voluptatem quos ullam excepturi soluta sed maxime ea voluptatum exercitationem quas obcaecati fugiat nisi neque in facilis, voluptates iusto? Totam, maiores quam minima obcaecati officiis placeat impedit!
+     Fugiat eum ratione eaque deserunt fugit repellendus sapiente quae consequatur, unde repudiandae voluptatibus delectus. Voluptatum facilis architecto eos expedita quo rem nobis, dicta velit magni porro perspiciatis, sint aperiam voluptate.
+     Accusamus asperiores repudiandae culpa! Aliquid magni nam provident perferendis veniam ratione eveniet praesentium sequi, voluptas recusandae tempora impedit placeat, fugit, illo odio unde rerum dolorem nostrum corrupti accusamus quae in.
+     Voluptatem veritatis ipsa delectus aliquam, possimus perspiciatis. Architecto dolorum consequuntur quod aperiam, libero vero ullam perferendis minus quis animi, deleniti natus, magnam hic necessitatibus? Placeat assumenda molestias fugit aspernatur eaque.
+     </p>
+     <!-- <div class="parent"></div>
+     <div class="parent"></div>
+     <div class="parent"></div> -->
+</body>
+</html>

@@ -1,0 +1,239 @@
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conic Gradient Watch</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #080808;
+    }
+
+    /* WATCH OUTER BODY */
+    .watch {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+
+        background:
+            conic-gradient(
+                from 0deg,
+                #777,
+                #eee,
+                #444,
+                #ddd,
+                #555,
+                #999,
+                #222,
+                #777
+            );
+
+        padding: 15px;
+
+        box-shadow:
+            0 0 30px rgba(255,255,255,0.15),
+            inset 0 0 20px #000;
+    }
+
+    /* WATCH FACE */
+    .face {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+
+        position: relative;
+
+        background:
+            radial-gradient(
+                circle at center,
+                #222 0%,
+                #111 65%,
+                #000 100%
+            );
+
+        border: 3px solid #111;
+
+        /* 60 minute marks using conic gradient */
+        background-image:
+            repeating-conic-gradient(
+                from 0deg,
+                white 0deg 1deg,
+                transparent 1deg 6deg
+            ),
+            radial-gradient(
+                circle,
+                #222 0%,
+                #111 70%,
+                #000 100%
+            );
+
+        background-size: 100% 100%;
+    }
+
+    /* INNER DARK CIRCLE */
+    .face::before {
+        content: "";
+        position: absolute;
+
+        inset: 18px;
+
+        border-radius: 50%;
+
+        background:
+            radial-gradient(
+                circle,
+                #171717,
+                #050505
+            );
+
+        z-index: 1;
+    }
+
+    /* 12, 3, 6, 9 */
+    .number {
+        position: absolute;
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        z-index: 5;
+    }
+
+    .twelve {
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .three {
+        right: 28px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .six {
+        bottom: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nine {
+        left: 28px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* HAND COMMON */
+    .hand {
+        position: absolute;
+        left: 50%;
+        bottom: 50%;
+
+        transform-origin: bottom center;
+
+        border-radius: 10px;
+
+        z-index: 10;
+    }
+
+    /* HOUR HAND */
+    .hour {
+        width: 8px;
+        height: 75px;
+
+        background: white;
+
+        transform: translateX(-50%) rotate(45deg);
+    }
+
+    /* MINUTE HAND */
+    .minute {
+        width: 5px;
+        height: 105px;
+
+        background: #00d9ff;
+
+        transform: translateX(-50%) rotate(130deg);
+    }
+
+    /* SECOND HAND */
+    .second {
+        width: 2px;
+        height: 120px;
+
+        background: red;
+
+        transform: translateX(-50%) rotate(220deg);
+
+        animation: rotateSecond 60s linear infinite;
+    }
+
+    @keyframes rotateSecond {
+        from {
+            transform: translateX(-50%) rotate(220deg);
+        }
+
+        to {
+            transform: translateX(-50%) rotate(580deg);
+        }
+    }
+
+    /* CENTER PIN */
+    .center {
+        position: absolute;
+
+        width: 15px;
+        height: 15px;
+
+        border-radius: 50%;
+
+        background: red;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+
+        z-index: 20;
+
+        box-shadow: 0 0 10px red;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="watch">
+
+    <div class="face">
+
+        <div class="number twelve">12</div>
+        <div class="number three">3</div>
+        <div class="number six">6</div>
+        <div class="number nine">9</div>
+
+        <div class="hand hour"></div>
+        <div class="hand minute"></div>
+        <div class="hand second"></div>
+
+        <div class="center"></div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+```
