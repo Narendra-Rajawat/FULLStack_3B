@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-shadow: 1px 1px 10px black;
+        }
+    #div1>p{
+        color: red;
+    }
+    /* > direct child selector */
+    h2~div{ 
+        color: blue;
+    }
+    #div1>h2{
+        color:aquamarine;
+    }
+   section p{
+    color:red;
+   }
+   section h2~p{
+    color:yellowgreen;
+   } 
+    </style>
+</head>
+<body>
+<div id="div1">
+<h2>Heading</h2>
+<p>First</p>
+<div>Something</div>
+<p>Second</p>
+</div>
+<section><p></p>
+<p>section paragraph1</p>
+<p>section paragraph2</p>
+<h2>section paragraph3</h2>
+<p>section paragraph4</p>
+<p>section paragraph5</p>
+</section>
+
+</body>
+</html>
